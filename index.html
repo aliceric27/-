@@ -25,9 +25,9 @@
             let n2 = document.getElementById('cl');
             let clvalue = cl.value;
             //計算公式
-            let result = clvalue * (1000 / (feqvalue / 2));
-            //將值塞回value
-            document.getElementById("total").value = result + "ns";
+            let result = Math.round(clvalue * (1000 / (feqvalue / 2)));
+            //將值塞回total表單
+            document.getElementById("total").value = result + " ns";
         }
     </script>
 
