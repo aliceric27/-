@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <title>RAM速度計算</title>
+</head>
+
+<body>
+    <div>輸入記憶體頻率</div>
+    <input id="feq" type="text" value="5600">
+    <div>輸入CL值</div>
+    <input id="cl" type="text" value="40">
+    <div>延遲時間(越低越好)</div>
+    <input id="total" type="text" value="" disabled>
+    <button onclick="calculator();">計算</button>
+
+    <script>
+        function calculator() {
+            //取記憶體頻率的輸入值
+            let n1 = document.getElementById('feq');
+            let feqvalue = feq.value;
+            //取CL值
+            let n2 = document.getElementById('cl');
+            let clvalue = cl.value;
+            //計算公式
+            let result = clvalue * (1000 / (feqvalue / 2));
+            //將值塞回value
+            document.getElementById("total").value = result + "ns";
+        }
+    </script>
+
+</body>
+
+</html>
